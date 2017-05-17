@@ -22,7 +22,9 @@
 	<body ng-app="blogApp">
 		<div class="container">
 			<div class="col-lg-3 fixed-col">
-				<h1>The Foo Blog</h1>
+				<h1><strong>The Foo Blog</strong></h1>
+				<h3>By Nate Paulemon</h3>
+				<br/>
 				<form action="/foo" method="POST">
 					<label for="bloggerName">Your Name</label>
 					<input type="text" class="form-control" name="bloggerName">
@@ -34,14 +36,21 @@
 				</form>	
 				<br/>
 				<a target="_blank" href="https://github.com/npaul007/meanApp">Project on Github</a>	
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<div class="border"></div>
+				<br/>
+				<br/>
 			</div>
 			<div class="col-lg-1"></div>
 			<div class="col-lg-8 non-fixed-col">
 				<div ng-controller="blogController" >
-					<h1>Blog Posts</h1>
+					<h1><strong>Blog Posts</strong></h1>
 					<div ng-repeat="b in blog">
-						<h2>Blog By: {{b.bloggerName}}</h2>
-						<h3><strong>{{b.date}}</strong></h3>
+						<h3>{{b.bloggerName}}</h3>
+						<h4>{{b.date}}</h4>
 						<p>{{b.blogText}}</p>
 						<br/>
 					</div>	

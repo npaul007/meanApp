@@ -8,3 +8,8 @@
 	}
 }
 
+@media screen and (max-width:1200px){
+	.border{
+		border-bottom: 1px solid #ccc;
+	}
+}
