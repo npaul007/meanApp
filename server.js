@@ -22,7 +22,7 @@ MongoClient.connect('mongodb://kwame:brown@ds139791.mlab.com:39791/foo-blog',fun
 	console.log('Successfully connected to MongoDB Server.');
 
 	// start server on port 3000
-	app.listen('3000',function () {
+	app.listen(process.env.PORT || 3000,function () {
 		console.log('App running on localhost:3000');
 	});
 });
