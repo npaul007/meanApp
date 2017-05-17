@@ -1,0 +1,10 @@
+@media screen and (min-width:1200px){
+	.fixed-col{
+		position: fixed !important;
+	}
+
+	.non-fixed-col{
+		float: right !important;
+	}
+}
+

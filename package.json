@@ -1,0 +1,26 @@
+{
+  "name": "meanapp",
+  "version": "1.0.0",
+  "description": "My first mean app",
+  "main": "0",
+  "scripts": {
+    "test": "console.log('foo')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "meanApp"
+  },
+  "keywords": [
+    "MEAN"
+  ],
+  "author": "Nate Paulemon",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "body-parser": "^1.17.1",
+    "circular-json": "^0.3.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.26"
+  }
+}

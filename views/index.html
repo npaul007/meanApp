@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Foo Blog</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script
+		  src="https://code.jquery.com/jquery-3.2.1.min.js"
+		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		  crossorigin="anonymous"></script>
+		 <link rel="stylesheet" href="../public/css/style.css">
+		<script src="../node_modules/angular/angular.js" type="text/javascript"></script>
+		<script src="../public/javascript/app.js" type="text/javascript"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body ng-app="blogApp">
+		<div class="container">
+			<div class="col-lg-3 fixed-col">
+				<h1>The Foo Blog</h1>
+				<form action="/foo" method="POST">
+					<label for="bloggerName">Your Name</label>
+					<input type="text" class="form-control" name="bloggerName">
+					<br/>
+					<label for="blogText">Your Blog</label>
+					<textarea name="blogText" id="" cols="30" rows="10" class="form-control" ></textarea>
+					<br/>
+					<input type="submit" class="form-control" href="#" value="Submit Blog">
+				</form>				
+			</div>
+			<div class="col-lg-1"></div>
+			<div class="col-lg-8 non-fixed-col">
+				<h1>Blog Posts</h1>
+				<div ng-controller="blogController" >
+					<div ng-repeat="b in blog">
+						<h2>Blog By: {{b.bloggerName}}</h2>
+						<h3><strong>{{b.date}}</strong></h3>
+						<p>{{b.blogText}}</p>
+						<br/>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
