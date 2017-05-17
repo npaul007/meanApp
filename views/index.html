@@ -31,12 +31,14 @@
 					<textarea name="blogText" id="" cols="30" rows="10" class="form-control" ></textarea>
 					<br/>
 					<input type="submit" class="form-control" href="#" value="Submit Blog">
-				</form>				
+				</form>	
+				<br/>
+				<a target="_blank" href="https://github.com/npaul007/meanApp">Project on Github</a>	
 			</div>
 			<div class="col-lg-1"></div>
 			<div class="col-lg-8 non-fixed-col">
-				<h1>Blog Posts</h1>
 				<div ng-controller="blogController" >
+					<h1>Blog Posts</h1>
 					<div ng-repeat="b in blog">
 						<h2>Blog By: {{b.bloggerName}}</h2>
 						<h3><strong>{{b.date}}</strong></h3>
