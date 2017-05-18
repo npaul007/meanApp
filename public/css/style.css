@@ -5,6 +5,7 @@
 	}
 
 	.non-fixed-col{
+		width: 70%;
 		float: right !important;
 		border-left: 1px solid #ccc;
 		padding-left: 60px !important;
