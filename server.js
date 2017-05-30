@@ -34,7 +34,7 @@ app.get('/', function (req,res) {
 
 // blog input route
 app.get('/json', function (req,res) {
-	var data = 	db.collection('blogs').find().toArray( function(err,doc) {
+	var data = db.collection('blogs').find().toArray( function(err,doc) {
 		res.json(CircularJSON.stringify(doc));
 	});
 });
